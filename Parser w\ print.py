@@ -1,7 +1,4 @@
 import re
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
-
 
 FILENAME = 'save games/mp_Shimazu1507_02_17.eu4'
 
