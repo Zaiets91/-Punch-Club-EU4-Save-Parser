@@ -2,7 +2,8 @@ import re
 
 FILENAME = 'save games/mp_Shimazu1507_02_17.eu4'
 
-regex = '''^(  |\t)(?P<country>[A-Z]{3})={
+regex = '''^(  |\t)(?P<country>[A-Z]{3})={(?!\n\t\t(has|gov))
+.+?was_player=yes
 .+?capped_development=(?P<dev>[0-9]+\.[0-9]{3})
 .+?realm_development=(?P<eff_dev>[0-9]+\.[0-9]{3})
 .+?max_land_morale=(?P<land_morale>[0-9]+\.[0-9]{3})
@@ -25,9 +26,3 @@ for match in result:
     print("%(country)7s %(dev)7s %(eff_dev)7s %(land_morale)7s %(naval_morale)7s %(score)7s %(treasury)7s %(income)7s %(army_tradition)7s %(navy_tradition)7s %(manpower)7s" % match.groupdict())
 
     
-
-
-
-
-
-
