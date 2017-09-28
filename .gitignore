@@ -2,3 +2,5 @@
 save games/
 *.json
 *.ipynb
+.ipynb_checkpoints/
+.git/
